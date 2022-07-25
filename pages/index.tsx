@@ -5,7 +5,9 @@ import { useState } from 'react'
 
 const Home: NextPage = () => {
   const [text, setText] = useState("")
-  const [textWithComma, setTextWithComma] = useState("")
+  const [carName, setCarName] = useState("")
+  const [carNumber, setCarNumber] = useState("")
+  const sizes = ["19.3", "27.2", "39", "54.3", "78"]
 
   function capitalizeWordsAndAddDashes(string: string) {
     const capitalized = string.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
@@ -28,6 +30,21 @@ function capitalizeWords(string: string) {
       <p>{capitalizeWordsAndAddDashes(text).replace(/,/g, "")}</p>
       <p className='font-bold'>foto tagler</p>
       <p>{text.replace(/,/g, ";")}</p>
+      <section>
+        <h2>SKU automation</h2>
+        <p>araba adı</p>
+        <input className='border border-black' value={carName} onChange={(e) => setCarName(e.target.value)} type="text" />
+        <p>araba sıra numarası</p>
+        <input className='border border-black' value={carNumber} onChange={(e) => setCarNumber(e.target.value)} type="text" />
+        <p>Black</p>
+        {carName && sizes.map(size => (
+          <p>{`LWA-CS-${carName}-${carNumber}-${size}-BLK`}</p>
+        ))}
+        <p>White</p>
+        {carName && sizes.map(size => (
+          <p>{`LWA-CS-${carName}-${carNumber}-${size}-WHT`}</p>
+        ))}
+      </section>
     </div>
   )
 }
