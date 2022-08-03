@@ -13,23 +13,23 @@ const GardenSKU = () => {
         <input className='border border-black' value={signNumber} onChange={(e) => setSignNumber(e.target.value)} type="text" />
         <p>Black</p>
         {productName && sizes.map(size => (
-          <p>{`LWA-CS-${productName}-${signNumber}-${size}-BLK`}</p>
+          <p>{`LWA-CGS-${productName}-${signNumber}-${size}-BLK`}</p>
         ))}
         <p>White</p>
         {productName && sizes.map(size => (
-          <p>{`LWA-CS-${productName}-${signNumber}-${size}-WHT`}</p>
+          <p>{`LWA-CGS-${productName}-${signNumber}-${size}-WHT`}</p>
         ))}
         <p>Gold</p>
         {productName && sizes.map(size => (
-          <p>{`LWA-CS-${productName}-${signNumber}-${size}-GLD`}</p>
+          <p>{`LWA-CGS-${productName}-${signNumber}-${size}-GLD`}</p>
         ))}
         <p>Copper</p>
         {productName && sizes.map(size => (
-          <p>{`LWA-CS-${productName}-${signNumber}-${size}-CPR`}</p>
+          <p>{`LWA-CGS-${productName}-${signNumber}-${size}-CPR`}</p>
         ))}
         <p>Silver</p>
         {productName && sizes.map(size => (
-          <p>{`LWA-CS-${productName}-${signNumber}-${size}-SLVR`}</p>
+          <p>{`LWA-CGS-${productName}-${signNumber}-${size}-SLVR`}</p>
         ))}
       </section>
   )
