@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import GardenSKU from '../components/GardenSKU'
 
 const Home: NextPage = () => {
   const [text, setText] = useState("")
@@ -45,6 +46,7 @@ function capitalizeWords(string: string) {
           <p>{`LWA-CS-${carName}-${carNumber}-${size}-WHT`}</p>
         ))}
       </section>
+      <GardenSKU />
     </div>
   )
 }
