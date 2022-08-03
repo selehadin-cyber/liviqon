@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const GardenSKU = () => {
     const [signNumber, setSignNumber] = useState("")
     const [productName, setProductName] = useState("")
-    const sizes = ["19.3", "27.2", "39", "54.3", "78"]
+    const sizes = ["12", "16", "22", "30", "39"]
   return (
     <section>
         <h2>Garden SKU automation</h2>
