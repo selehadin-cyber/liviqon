@@ -3,11 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 import GardenSKU from '../components/GardenSKU'
+import GeneralSKU from '../components/GeneralSKU'
 
 const Home: NextPage = () => {
   const [text, setText] = useState("")
   const [carName, setCarName] = useState("")
   const [carNumber, setCarNumber] = useState("")
+  
   const sizes = ["19.3", "27.2", "39", "54.3", "78"]
 
   function capitalizeWordsAndAddDashes(string: string) {
@@ -47,6 +49,7 @@ function capitalizeWords(string: string) {
         ))}
       </section>
       <GardenSKU />
+      <GeneralSKU />
     </div>
   )
 }
